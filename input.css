@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ficon:hover {
+  filter: invert(79%) sepia(61%) saturate(464%) hue-rotate(130deg)
+    brightness(89%) contrast(85%);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .middle {
+  display: none;
+}
+
+.open .bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+/* fade in effect from opacity-0 to opacity-100 doesn't work, why? */
+.trans {
+  @apply transition-opacity duration-500 opacity-70;
+}
